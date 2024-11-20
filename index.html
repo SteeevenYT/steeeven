@@ -3,42 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steeeven YT</title>
+    <title>Your Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header -->
     <header>
-        <h1>Welcome...</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>Your Website</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <!-- Search Bar -->
-    <section class="search">
-        <h2>Search Projects</h2>
-        <input type="text" id="searchBox" placeholder="Search projects..." onkeyup="searchProjects()">
-    </section>
+    <!-- Main Content -->
+    <main class="container">
+        <section class="hero">
+            <h2>Welcome to My Portfolio</h2>
+            <p>Explore my latest projects and get in touch.</p>
+        </section>
 
-    <!-- Projects Section -->
-    <section class="projects">
-        <h2>Our Projects</h2>
-        <div id="project-list">
-            <!-- Project list will be populated dynamically with JavaScript -->
-        </div>
-    </section>
+        <!-- Search Section -->
+        <section class="search-section">
+            <h3>Search Projects</h3>
+            <input type="text" id="searchBox" placeholder="Search projects..." onkeyup="searchProjects()">
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects">
+            <h2>Our Projects</h2>
+            <div id="project-list"></div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Your Website</p>
+        <div class="container">
+            <p>&copy; 2024 Your Website</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-
