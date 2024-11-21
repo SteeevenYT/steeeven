@@ -6,15 +6,12 @@ document.getElementById('contactForm').addEventListener('submit', function (even
     const email = document.getElementById('email').value;
     const message = document.getElementById('message').value;
 
-    // Simulate saving the message (in a real-world case, use AJAX to send it to the server)
+    // Simulate saving the message (this would normally be sent to a server)
     alert('Message submitted successfully!');
 
     // Reset form
     document.getElementById('contactForm').reset();
 
-    // In a real scenario, the form data would be sent to the server.
-    // For now, we simply log the message to simulate data submission.
-    console.log(`New message from ${name} (${email}): ${message}`);
-}
-);
-
+    // Call the addNewMessage function (defined in admin.js) to add the message
+    addNewMessage(name, email, message);
+});
