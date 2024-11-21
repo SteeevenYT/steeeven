@@ -1,11 +1,5 @@
-// Simulating stored messages (replace this with an actual back-end call to fetch real data)
-const contactMessages = [
-    { name: 'John Doe', email: 'john@example.com', message: 'Hello, I need help with my account.' },
-    { name: '', email: '', message: '' },  // Invalid message (empty fields)
-    { name: 'Jane Smith', email: 'jane@example.com', message: 'I have a question about pricing.' },
-    { name: 'Mark Johnson', email: '', message: 'Can you provide more details about your services?' },  // Invalid (missing email)
-    { name: 'Emily Clark', email: 'emily@example.com', message: 'I am interested in your services.' }
-];
+// Simulating stored messages (this would ideally be fetched from a server or database)
+let contactMessages = [];
 
 // Function to check password
 function checkPassword() {
@@ -28,6 +22,8 @@ function checkPassword() {
 // Function to display valid contact form messages (those with name, email, and message)
 function displayValidMessages() {
     const messageContainer = document.getElementById('contact-messages');
+    messageContainer.innerHTML = '';  // Clear previous messages
+
     // Filter messages to display only valid ones (non-empty fields)
     const validMessages = contactMessages.filter(message => message.name && message.email && message.message);
 
@@ -41,4 +37,15 @@ function displayValidMessages() {
         `;
         messageContainer.appendChild(messageDiv);
     });
+}
+
+// Function to simulate adding a new message (this would be triggered on form submit)
+function addNewMessage(name, email, message) {
+    // Simulate saving the new message
+    contactMessages.push({ name, email, message });
+
+    // Immediately display the new message on the admin page
+    if (document.getElementById('admin-dashboard').style.display === 'block') {
+        displayValidMessages();
+    }
 }
