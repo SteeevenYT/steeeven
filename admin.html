@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Admin login prompt -->
+    <div id="admin-login" class="login-container">
+        <h2>Admin Login</h2>
+        <label for="password">Password:</label>
+        <input type="password" id="admin-password" placeholder="Enter password">
+        <button onclick="checkPassword()">Login</button>
+        <p id="login-error" style="color: red; display: none;">Incorrect password. Please try again.</p>
+    </div>
+
+    <!-- Admin Dashboard - Hidden initially -->
+    <div id="admin-dashboard" class="container" style="display: none;">
+        <h1>Admin Dashboard</h1>
+        <h2>Contact Form Submissions</h2>
+        <div id="contact-messages">
+            <!-- Dynamic content will go here -->
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
